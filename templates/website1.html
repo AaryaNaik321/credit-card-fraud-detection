@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title>
+        Fraud Detector
+    </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        p{
+            display: inline;
+        }
+        body{
+             background-image: url('/static/img');
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-size: cover;
+        }
+        .card {
+            margin-right: auto;
+            margin-left: auto;
+            width: 250px;
+            box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+            height: 300px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0);
+            padding: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+    <form class='grid' action="/result" method="post">
+    <h1 align="center">Welcome To Credit Card Fraud Detector !!</h1>
+    <div class="container mt-5" action="/result" method="Post">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card" style="z-index: 1; left: 66px; top: -20px; position: absolute; height: 470px; width: 1000px">
+                    <div class="card-header" style="background-color:#3584d492" align="center">
+                        <h1>Hi User ! </h1>
+                        <h6>Please Enter The History</h6>
+                    </div>
+                    <div class="card-body">
+                        <p style='z-index: 1; left: 443px; top: 230px; position: absolute; height: 30px; width:200px ;'><b> Enter The Transcations :</b></p>  <input type="text" name="Area" id="Area" style='z-index: 1; left: 443px; top: 260px; position: absolute; height: 30px; width:200px ; background-color: rgba(255, 255, 255, 0.2)' > <br><br>
+
+                        
+                        <button type="submit" style='z-index: 1; left: 455px; top: 350px; position: absolute; height: 30px; width:100px ; background-color: rgba(0, 195, 255, 0.427)'>Submit</button>
+
+                    </div>
+                    <py-script>
+                    </py-script>
+                    <div class="card-footer" style="background-color:rgba(0, 183, 255, 0.519)" align="center">
+                        <center>
+                            {% if name %}
+                             <p><B>
+                                This Transcation is:</B> {{name}}
+                            </p>
+                            {% endif %}
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+  
+      
+</body>
+</html>
